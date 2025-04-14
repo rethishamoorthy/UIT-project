@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black  fixed-top p-3 shadow">
       <div className="container">
-        <Link className="navbar-brand text-white fw-bold fs-4" to="/">TrashCash</Link>
+        <Link className="navbar-brand text-white fw-bold fs-4" to="/">♻️TrashCash</Link>
 
         {/* Navbar Toggle Button for Mobile View */}
         <button 
@@ -49,13 +49,33 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-white fs-5" to="/">Form</Link>
+          <li className="nav-item">
+              <Link className="nav-link text-white fs-5" to="/">Front</Link>
+            </li>
+          <li className="nav-item">
+              <Link className="nav-link text-white fs-5" to="/Profile">Profile</Link>
+            </li>
+          <li className="nav-item">
+              <Link className="nav-link text-white fs-5" to="/Home">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white fs-5" to="/user">User/Admin</Link>
+              <Link className="nav-link text-white fs-5" to="/Signup">signup</Link>
             </li>
-          </ul>
+         <li className="nav-item">
+              <Link className="nav-link text-white fs-5" to="/login">Login</Link>
+            </li>
+           {/*} <li className="nav-item">
+              <Link className="nav-link text-white fs-5" to="/form">Form</Link>
+            </li>*/}
+            
+            <li className="nav-item">
+              
+              <Link className="nav-link text-white fs-5" to="/user">User</Link>
+              
+            </li>
+            
+          
+             </ul>
         </div>
       </div>
     </nav>

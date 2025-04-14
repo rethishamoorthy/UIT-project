@@ -155,9 +155,9 @@ function Admin() {
   const [kg, setKg] = useState("");
 
   useEffect(() => {
-    // Save to localStorage whenever members state changes
+  
     localStorage.setItem("userMembers", JSON.stringify(members));
-    // Dispatch a custom event to signal other components
+  
     window.dispatchEvent(new Event("storage"));
   }, [members]);
 
@@ -194,6 +194,7 @@ function Admin() {
         Admin - Membership Input
       </h1>
       <form onSubmit={handleSubmit} className="mb-4 space-y-2">
+      <label>Name</label>
         <input
           type="text"
           placeholder="Name"
@@ -201,6 +202,8 @@ function Admin() {
           onChange={(e) => setName(e.target.value)}
           className="p-2 border rounded w-full"
         />
+        <br/><br/>
+        <label>How many kg</label>
         <input
           type="number"
           placeholder="Plastic Collected (kg)"
@@ -208,9 +211,11 @@ function Admin() {
           onChange={(e) => setKg(e.target.value)}
           className="p-2 border rounded w-full"
         />
+        <br/><br/>
         <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded">
           Add Member
         </button>
+        
       </form>
 
       <button onClick={handleClear} className="mt-4 px-4 py-2 bg-red-500 text-white rounded">

@@ -89,12 +89,15 @@ export default App;*/
 
 
 
-
+/*
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Front from "./Membership/Front";
 import Navbar from "./Membership/Navbar";  // Import Navbar
 import Form from "./Membership/Form";
 import User from "./Membership/User";
 import Admin from "./Membership/Admin";
+import Login from "./Membership/Login";
+import Calculator from "./Membership/Calculator";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -102,11 +105,146 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function App() {
   return (
     <Router>
-      <Navbar />  {/* Navbar should be here */}
+      <Navbar />  {/* Navbar should be here */
+      /*<Routes>
+      <Route path="/Front" element={<Front />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/login/Home" element={<LoginHome />} />
+        <Route path="/form/Home" element={<FormHome />} />
+        <Route path="/User/Home" element={<UserHome />} />
+        <Route path="/Admin/Home" element={<Adminhome />} />
+        <Route path="/calculator/Home" element={<CalculatorHome />} />
+       
+      </Routes>
+    </Router>
+  
+  );
+}
+
+export default App;*/
+
+
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Front from "./Membership/Front";
+import Profile from "./Membership/Profile";
+import Adminlogin from "./Membership/Adminlogin";
+import Signup from "./Membership/Signup";
+import Home from "./Membership/Home";
+import Navbar from "./Membership/Navbar";
+import Form from "./Membership/Form";
+import User from "./Membership/User";
+import Admin from "./Membership/Admin";
+import Login from "./Membership/Login";
+import AdminUserdet from "./Membership/AdminUserdet";
+import Calculator from "./Membership/Calculator";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+function App() {
+  return (
+    <Router>
       <Routes>
-        <Route path="/" element={<Form />} />
-        <Route path="/User" element={<User />} />
-        <Route path="/Admin" element={<Admin />} />
+        {/* Front page as default route */}
+        <Route path="/" element={<Front />} />
+
+        {/* Pages with Navbar */}
+        <Route
+          path="/home"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+         <Route
+          path="/profile"
+          element={
+            <>
+              <Navbar />
+              <Profile />
+            </>
+          }
+        />
+
+<Route
+          path="/AdminUserdet"
+          element={
+            <>
+              <Navbar />
+              <AdminUserdet />
+            </>
+          }
+        />
+        <Route
+
+          path="/Adminlogin"
+          element={
+            <>
+              <Navbar />
+              <Adminlogin/>
+            </>
+          }
+        />
+         <Route
+          path="/Signup"
+          element={
+            <>
+              <Navbar />
+              <Signup />
+            </>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <>
+              <Navbar />
+              <User />
+            </>
+          }
+        />
+         <Route
+          path="/Admin"
+          element={
+            <>
+              <Navbar />
+              <Admin />
+            </>
+          }
+        />
+       
+        {/* Other routes */}
+        <Route
+          path="/form"
+          element={
+            <>
+              <Navbar />
+              <Form />
+            </>
+          }
+        />
+        <Route
+          path="/calculator"
+          element={
+            <>
+              <Navbar />
+              <Calculator />
+            </>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <>
+              <Navbar />
+              <Login />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
