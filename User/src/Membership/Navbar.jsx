@@ -64,9 +64,9 @@ const Navbar = () => {
          <li className="nav-item">
               <Link className="nav-link text-white fs-5" to="/login">Login</Link>
             </li>
-           {/*} <li className="nav-item">
+           <li className="nav-item">
               <Link className="nav-link text-white fs-5" to="/form">Form</Link>
-            </li>*/}
+            </li>
             
             <li className="nav-item">
               

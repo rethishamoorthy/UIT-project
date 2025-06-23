@@ -219,7 +219,7 @@ function App() {
        
         {/* Other routes */}
         <Route
-          path="/form"
+          path="/Form"
           element={
             <>
               <Navbar />
