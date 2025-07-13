@@ -15,7 +15,7 @@ function App() {
 <div style={{ textAlign: 'center', margin: '30px 0' }}>
 <div style={{ textAlign: 'center', margin: '30px 0' }}>
   <video
-    src="/TrashCash.mp4"
+    src="/TC.mp4"
     controls
     autoPlay
     muted
