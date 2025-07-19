@@ -1,0 +1,32 @@
+
+services:
+  frontend:
+    build: .UIT_project/User
+    ports:
+      - "5173:5173"
+    network:
+      - mern_network
+
+  backend:
+    build: .UIT_project/backend
+    ports:
+      - "5050:5050"
+    network:
+      - mern_network
+    
+    depends_on:
+      - mongodb
+   
+  mongodb:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    network:
+      mern-network:
+       - deive:bridge
+
+volumes:
+  mongo-data:
